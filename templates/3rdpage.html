@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>PG Details</title>
+  </head>
+  <body>
+    <div class="Pg-details">
+      <h2>{{object.name}}</h2>
+      <p>Address : {{object.address}}<br>
+        Room Rent : {{object.room_rent}}<br>
+        Mess facility : {% if object.mess_facility %}
+                          Yes <br>
+                        {% else %}
+                          No <br>
+                        {% endif %}
+        Gender : {% if object.gender %}
+                    Boys only <br>
+                  {% else %}
+                    Girls only <br>
+                  {% endif %}    
+      </p>
+    </div>
+  </body>
+</html>
