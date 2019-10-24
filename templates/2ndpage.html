@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>PGs Found</h2>
+    <ul>
+      {% for PG in PGs_list %}
+      <li>{{PG}}</li>
+      {% endfor %}
+    </ul>
+
+
+
+
+    <div class="row">
+	<aside class="col-sm-4">
+    <p>Filter 1</p>
+
+
+    <div class="card">
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Sharing Type </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <form>
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <span class="form-check-label">
+                        Single Sharing
+                      </span>
+                    </label> <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <span class="form-check-label">
+                        Double sharing
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="checkbox" value="">
+                      <span class="form-check-label">
+                        Triple Sharing
+                      </span>
+                    </label>  <!-- form-check.// -->
+                </form>
+
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Choose type </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    First hand items
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Brand new items
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Some other option
+                  </span>
+                </label>
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+    </div> <!-- card.// -->
+
+{% endblock content %}
