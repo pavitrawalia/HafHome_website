@@ -16,7 +16,11 @@ class PG(models.Model):
         choices=gender_choices,
         default='B',
     )
-    dist_from_cllg = models.DecimalField(max_digits=8,decimal_places=2)
+    distance_from_college = models.DecimalField(max_digits=8,decimal_places=2)
+    one_person = models.BooleanField()
+    two_person = models.BooleanField()
+    three_person = models.BooleanField()
+
 
     def __str__(self):
         return self.name
