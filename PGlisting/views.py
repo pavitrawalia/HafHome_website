@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from .models import PG
 # Create your views here.
+
+class HomePageView(TemplateView):
+    template_name = "1stpage.html"
 
 class ListingPageView(ListView):
     model = PG

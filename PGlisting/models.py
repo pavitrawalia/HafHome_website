@@ -7,7 +7,16 @@ class PG(models.Model):
     address = models.TextField()
     room_rent = models.IntegerField()
     mess_facility = models.BooleanField()
-    gender = models.BooleanField()
+    gender_choices = [
+        ('B', 'Boy'),
+        ('G', 'Girl'),
+    ]
+    gender = models.CharField(
+        max_length=1,
+        choices=gender_choices,
+        default='B',
+    )
+    dist_from_cllg = models.DecimalField(max_digits=8,decimal_places=2)
 
     def __str__(self):
         return self.name
