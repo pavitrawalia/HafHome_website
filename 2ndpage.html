@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+{% block content %}
+   
+   <style>
+       h2.alignit {
+           text-align: center;
+           padding-top: 35px;
+       } 
+
+       .row {
+           margin-right: 30px;
+       }
+
+       h3.filters {
+           padding-left: 40px;
+       }
+
+       .class-1 {
+           border-top: 1.5px solid #b4b4b4;
+           width 95%;
+       }
+
+       .list {
+           float: right;
+           padding-right: 80px;
+           padding-top: 50px;
+           padding-bottom: 380px;
+           width: 400px;
+           height: 270px;
+           @include media-breakpoint-only(lg) {
+              column-count: 2;
+            }
+           @include media-breakpoint-only(xl) {
+              column-count: 3;
+            }
+       }
+
+       .list-body {
+           text-align: left;
+           padding-top: 15px;
+           
+       }
+
+       .list-img-top {
+           height: 200px;
+           width: 300px;
+       }
+
+    </style>
+    
+    
+    
+    <h2 class="alignit">PGs Found!!</h2>
+    <hr class="class-1">
+
+
+    
+    {% for PG in PGs_list %}
+           <div class="list col-lg-4">
+              <img src="..." class="list-img-top" alt="...">
+              <div class="list-body">
+                <h5 class="list-title">{{PG}}</h5>
+                <p class="list-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Schedule a Free Visit</a>
+              </div>
+            </div>
+        
+    
+    {% endfor %}
+
+    <div class="row">
+	<aside class="col-xs-4 col-sm-4 col-lg-10">
+    <h3 class="filters">Filters</h3>
+
+
+    <div class="card">
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Sharing Type </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <form>
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Single Sharing
+                      </span>
+                    </label> <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Double sharing
+                      </span>
+                    </label>  <!-- form-check.// -->
+                    <label class="form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                      <span class="form-check-label">
+                        Triple Sharing
+                      </span>
+                    </label>  <!-- form-check.// -->
+                </form>
+
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Choose Gender </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Male
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Female
+                  </span>
+                </label>
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+        
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Choose Rent </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    less than Rs.5,000
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Rs.5,000 - Rs.7,500
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Rs.7,500 - Rs.10,000
+                  </span>
+                </label>
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+        
+        <article class="card-group-item">
+            <header class="card-header">
+                <h6 class="title">Choose Locality </h6>
+            </header>
+            <div class="filter-content">
+                <div class="card-body">
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Begumpur, Rohini
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Sector - 22, Rohini
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Sector - 20, Rohini
+                  </span>
+                </label>
+                <label class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadio" value="">
+                  <span class="form-check-label">
+                    Budh Vihar, Rohini
+                  </span>
+                </label>
+                </div> <!-- card-body.// -->
+            </div>
+        </article> <!-- card-group-item.// -->
+    </div> <!-- card.// -->
+
+{% endblock content %}
